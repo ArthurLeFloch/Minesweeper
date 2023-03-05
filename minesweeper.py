@@ -1,7 +1,7 @@
 import pygame
 import sys
 from pygame.locals import *
-from classes import Slider,Button
+from ui import Slider, Button
 from random import randint as rd
 import numpy as np
 import time
@@ -14,8 +14,9 @@ pygame.display.set_caption("Démineur")
 pygame_icon = pygame.image.load('icon.ico')
 pygame.display.set_icon(pygame_icon)
 
+flags = FULLSCREEN | DOUBLEBUF
 SW, SH = 0,0
-SCREEN = pygame.display.set_mode((SW, SH))
+SCREEN = pygame.display.set_mode((SW, SH), flags, 16)
 SW, SH = SCREEN.get_size()
 clock = pygame.time.Clock()
 
